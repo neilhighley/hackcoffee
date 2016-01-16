@@ -1,3 +1,5 @@
+import requests
+
 class DeviceManager:
 
 	def __init__(self):
@@ -28,6 +30,11 @@ class ArduinoDevice(Device):
 	def __init__(self,name):
 		self.Type=1
 		self.Name=name
+		self.Url="http://mockbin.org/bin/489b2d3d-049e-48b2-bc67-f632bf7018bb"
 
 	def send(self,cmd):
 		print("Arduino Command Received:",cmd)
+		self.LastResponse=requests.get(self.Url+"?foo="+cmd)
+		print(self.LastResponse)
+		
+		

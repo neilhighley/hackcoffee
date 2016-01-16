@@ -21,6 +21,7 @@ from GameLibrary import GameManager
 from CardLibrary import CardManager
 from DeviceLibrary import DeviceManager
 from DeviceLibrary import Device
+
 from DeviceLibrary import ArduinoDevice
 from ExceptionLibrary import UserNotFoundError
 
